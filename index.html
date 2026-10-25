@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>박경태 | Park KyoungTae</title>
-  <meta name="description" content="박경태(Park KyoungTae)의 개인 홈페이지 — 프로젝트, 경력, 연락처.">
-  <meta property="og:title" content="박경태 | Park KyoungTae">
+  <title>박경태 | 사족보행 로봇 소프트웨어 엔지니어</title>
+  <meta name="description" content="레인보우로보틱스 사족보행로봇사업부 SW팀 연구원 박경태. RBQ 통신 API · SDK · GUI · OTA · 블랙박스 · 시뮬레이터, 그 전에는 Vision60 LiDAR · GPS 자율주행.">
+  <meta property="og:title" content="박경태 | 사족보행 로봇 소프트웨어 엔지니어">
+  <meta property="og:description" content="Rainbow Robotics · Quadruped Robot Division · Researcher">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ggiingtae.github.io/">
+  <meta property="og:image" content="https://ggiingtae.github.io/img/profile.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <canvas id="bg"></canvas>
@@ -20,8 +23,8 @@
     <a href="#home" class="logo"><span class="sig">$</span> ggiingtae<span class="cursor">_</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">~/home</a></li>
+      <li><a href="#about">~/about</a></li>
       <li><a href="#projects">~/projects</a></li>
-      <li><a href="#career">~/career</a></li>
       <li><a href="#contact">~/contact</a></li>
     </ul>
     <button class="lang" id="langBtn">$ EN</button>
@@ -32,29 +35,47 @@
     <!-- ===== HERO ===== -->
     <section id="home" class="hero wrap">
       <div class="hero-copy">
-        <div class="kicker" data-i18n="kicker"></div>
-        <h1 class="h1" data-i18n="h1"></h1>
-        <p class="name"><b data-i18n="name"></b> <span data-i18n="role"></span></p>
+        <div class="kicker" id="kicker"></div>
+        <h1 class="h1" id="h1"></h1>
+        <p class="name"><b id="heroName"></b> <span id="heroRole"></span></p>
         <ul class="facts" id="facts"></ul>
         <div class="cta">
-          <a class="btn pri" href="#projects" data-i18n="ctaProjects"></a>
-          <a class="btn" href="#career" data-i18n="ctaCareer"></a>
+          <a class="btn pri" href="#projects" data-ui="ctaProjects"></a>
+          <a class="btn" href="#about" data-ui="ctaCareer"></a>
           <a class="btn" id="ghBtn" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" id="mailBtn">Email</a>
         </div>
       </div>
 
-      <div class="term" aria-hidden="true">
-        <div class="term-bar"><i></i><i></i><i></i><span>~/ggiingtae — zsh</span></div>
-        <div class="term-body">
-          <div class="term-head">
-            <img id="avatar" alt="">
-            <div>
-              <div class="t-bright" data-i18n="name"></div>
-              <div class="t-dim">@ggiingtae</div>
-            </div>
-          </div>
+      <div class="hero-visual" aria-hidden="true">
+        <figure class="viewfinder">
+          <img src="img/profile.jpg" alt="" width="686" height="733" fetchpriority="high">
+          <span class="vf-c tl"></span><span class="vf-c tr"></span><span class="vf-c bl"></span><span class="vf-c br"></span>
+          <span class="vf-rec"><i></i>REC</span>
+          <span class="vf-meta">RBQ · Vision60</span>
+        </figure>
+        <div class="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>~/ggiingtae — zsh</span></div>
           <pre id="termOut"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="sec wrap">
+      <div class="sec-head">
+        <span class="num">01</span>
+        <h2 data-ui="aboutTitle"></h2>
+        <p class="lead" data-ui="aboutLead"></p>
+      </div>
+      <div class="about">
+        <div>
+          <div class="label" data-ui="career"></div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+        <div>
+          <div class="label" data-ui="skills"></div>
+          <dl class="skills" id="skills"></dl>
         </div>
       </div>
     </section>
@@ -62,41 +83,34 @@
     <!-- ===== PROJECTS ===== -->
     <section id="projects" class="sec wrap">
       <div class="sec-head">
-        <span class="num">01</span>
-        <h2 data-i18n="projTitle"></h2>
-        <p class="lead" data-i18n="projLead"></p>
-      </div>
-      <div class="grid" id="projGrid"></div>
-      <p class="gh-note" id="ghNote"></p>
-    </section>
-
-    <!-- ===== CAREER ===== -->
-    <section id="career" class="sec wrap">
-      <div class="sec-head">
         <span class="num">02</span>
-        <h2 data-i18n="careerTitle"></h2>
-        <p class="lead" data-i18n="careerLead"></p>
+        <h2 data-ui="projTitle"></h2>
+        <p class="lead" data-ui="projLead"></p>
       </div>
-      <ol class="timeline" id="timeline"></ol>
-      <div class="skills" id="skills"></div>
+      <div id="companies"></div>
+      <div id="ghRepos"></div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="sec wrap contact">
+    <section id="contact" class="sec wrap">
       <div class="sec-head">
         <span class="num">03</span>
-        <h2 data-i18n="contactTitle"></h2>
-        <p class="lead" data-i18n="contactLead"></p>
+        <h2 data-ui="contactTitle"></h2>
+        <p class="lead" data-ui="contactLead"></p>
       </div>
       <div class="contact-row" id="contactRow"></div>
     </section>
   </main>
 
   <footer class="wrap">
-    <p>&copy; <span id="year"></span> <span data-i18n="name"></span> | ggiingtae</p>
+    <p>&copy; <span id="year"></span> <span id="footName"></span> | ggiingtae</p>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <dialog id="modal" class="modal">
+    <div class="modal-inner" id="modalBody"></div>
+  </dialog>
+
+  <script src="data.js?v=2"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
