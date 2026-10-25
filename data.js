@@ -53,7 +53,7 @@ const SITE = {
       desc: { ko: '로봇연구소 로봇지능팀 연구원', en: 'Researcher, Robot Intelligence Team, Robotics Lab' } },
     { period: '2017.03 – 2025.02',
       org: { ko: '건국대학교', en: 'Konkuk University' },
-      desc: { ko: '스마트운행체공학과 학사 · GPA 3.59 / 4.5', en: 'B.S. Smart Vehicle Engineering · GPA 3.59 / 4.5' } },
+      desc: { ko: '스마트운행체공학과 학사', en: 'B.S. Smart Vehicle Engineering' } },
   ],
 
   skills: [
