@@ -21,8 +21,7 @@
     $('#h1').textContent = L(h.h1);
     $('#heroName').textContent = $('#footName').textContent = L(h.name);
     $('#heroRole').textContent = L(h.role);
-    $('#facts').innerHTML = h.facts.map(f =>
-      `<li><span class="k">${esc(L(f.k))}</span><span class="v">${esc(L(f.v))}</span></li>`).join('');
+    $('#intro').textContent = L(h.intro);
 
     $('#timeline').innerHTML = SITE.career.map(c => `
       <li class="reveal">

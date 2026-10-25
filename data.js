@@ -33,14 +33,8 @@ const SITE = {
     h1: { ko: '사족보행 로봇 소프트웨어 엔지니어', en: 'Quadruped Robot Software Engineer' },
     name: { ko: '박경태', en: 'Kyungtae Park' },
     role: { ko: '레인보우로보틱스 · 사족보행로봇사업부 SW팀 · 연구원', en: 'Rainbow Robotics · Quadruped Robot Division SW Team · Researcher' },
-    facts: [
-      { k: { ko: '지금은', en: 'Now' },
-        v: { ko: 'RBQ 사족보행 로봇의 통신 API · SDK · GUI · OTA · 블랙박스 · 시뮬레이터', en: 'Communication API, SDK, GUI, OTA, black box and simulators for the RBQ quadruped' } },
-      { k: { ko: '전에는', en: 'Before' },
-        v: { ko: 'Vision60 위에서 LiDAR · GPS 자율주행, 지뢰탐지 로봇, E-Stop', en: 'LiDAR & GPS navigation, mine detection and E-Stop on Vision60' } },
-      { k: '2017 –',
-        v: { ko: '건국대 스마트운행체공학과에서 시작해 ROS 2와 함께 로보틱스로', en: 'Smart Vehicle Engineering at Konkuk Univ., then into robotics with ROS 2' } },
-    ],
+    intro: { ko: '자율주행부터 통신 · SDK · GUI · 시뮬레이터까지,\n로봇 소프트웨어의 모든 것을 AI 도구와 함께 만듭니다.',
+             en: 'From autonomous navigation to networking, SDKs, GUIs and simulators —\nI build every layer of robot software, side by side with AI tools.' },
   },
 
   terminal: [
