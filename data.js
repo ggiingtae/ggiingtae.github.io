@@ -33,8 +33,8 @@ const SITE = {
     h1: { ko: '사족보행 로봇 소프트웨어 엔지니어', en: 'Quadruped Robot Software Engineer' },
     name: { ko: '박경태', en: 'Kyungtae Park' },
     role: { ko: '레인보우로보틱스 · 사족보행로봇사업부 SW팀 · 연구원', en: 'Rainbow Robotics · Quadruped Robot Division SW Team · Researcher' },
-    intro: { ko: '자율주행부터 통신 · SDK · GUI · 시뮬레이터까지,\n로봇 소프트웨어의 모든 것을 AI 도구와 함께 만듭니다.',
-             en: 'From autonomous navigation to networking, SDKs, GUIs and simulators —\nI build every layer of robot software, side by side with AI tools.' },
+    intro: { ko: '자율주행에서 시작해서 통신 · SDK · GUI · 시뮬레이터까지,\n로봇 소프트웨어의 모든 것을 AI 도구와 함께 만듭니다.',
+             en: 'Starting from autonomous navigation through networking, SDKs, GUIs and simulators —\nI build every layer of robot software, side by side with AI tools.' },
   },
 
   terminal: [
