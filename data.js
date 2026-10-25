@@ -14,7 +14,7 @@ const SITE = {
       ctaProjects: '프로젝트 보기', ctaCareer: '경력',
       aboutTitle: '자기소개', aboutLead: '걸어온 길과 쓰는 도구들.',
       projTitle: '프로젝트', projLead: '사족보행 로봇 위에서 만들어 온 것들.',
-      contactTitle: '연락하기', contactLead: '협업, 질문, 채용 제안 모두 환영합니다.',
+      contactTitle: 'Contact', contactLead: '협업, 질문, 채용 제안 모두 환영합니다.',
       overview: '개요', roles: '주 역할', more: '자세히', less: '접기',
       ghTitle: 'GitHub 공개 저장소', career: 'CAREER', skills: 'SKILLS',
     },
